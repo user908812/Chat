@@ -39,5 +39,32 @@ function setDarkTheme() {
 function setBGColor() {
     document.body.style.background = bgc.value;
 }
-let loopScript = document.getElementById('loopScript');
-setInterval(() => { loopScript }, 0);
+
+
+function dodajKomentarz() {
+    var chatDiv = document.getElementById('chat');
+    chatDiv.innerHTML = '';
+
+    var scriptElement = document.createElement('script');
+    scriptElement.src = "https://giscus.app/client.js";
+    scriptElement.dataset.repo = "user908812/Chat";
+    scriptElement.dataset.repoId = "R_kgDOL4LeXw";
+    scriptElement.dataset.category = "General";
+    scriptElement.dataset.categoryId = "DIC_kwDOL4LeX84CfMRf";
+    scriptElement.dataset.mapping = "pathname";
+    scriptElement.dataset.strict = "0";
+    scriptElement.dataset.reactionsEnabled = "1";
+    scriptElement.dataset.emitMetadata = "0";
+    scriptElement.dataset.inputPosition = "bottom";
+    scriptElement.dataset.theme = "dark_dimmed";
+    scriptElement.dataset.lang = "pl";
+    scriptElement.crossorigin = "anonymous";
+    scriptElement.async = true;
+    
+    chatDiv.appendChild(scriptElement);
+
+    chatDiv.removeEventListener('DOMNodeInserted', dodajKomentarz);
+}
+document.body.addEventListener('keydown', (e) => {
+    document.getElementById('chat').addEventListener('DOMNodeInserted', dodajKomentarz);
+});
