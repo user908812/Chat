@@ -6,34 +6,84 @@
 
     <meta name="author" content="Aleksander Orzech">
     <meta name="description" content="Aplikacja dzieki ktorej mozesz porozumiewac sie z innymi.">
-    <meta name="keywords" content="online, chat, app, html, css, js, 2024, may">
+    <meta name="keywords" content="online, capybara, chat, app, html, css, js, 2024, may">
 
-    <title>Online chat</title>
+    <title>Capybara chatting</title>
 
     <link rel="icon" href="icon.png">
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-    
-    <h1>Orzech chat</h1>
-    <div id="chat">
-        <script src="https://giscus.app/client.js"
-        data-repo="user908812/Chat"
-        data-repo-id="R_kgDOL4LeXw"
-        data-category="General"
-        data-category-id="DIC_kwDOL4LeX84CfMRf"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="noborder_light"
-        data-lang="pl"
-        crossorigin="anonymous"
-        async>
-</script>
-    </div>
+    <main>
+        <div id="left">
+            <img id="capybara" draggable="false" src="capybara.png" alt="capybara.png">
+            <div id="app-name">Capybara chatting v1.0</div>
+            <hr>
+            <br>
+            <aside>
+                <details>
+                    <summary class="summary-title">SETTINGS</summary>
+                    <p>
+                        <div id="options">
+                            <div id="theme">
+                                <h2 id="theme-title">Theme</h2>
+                                <button id="lightThemeBTN" onclick="setLightTheme()">Light</button>
+                                <button id="darkThemeBTN" onclick="setDarkTheme()">Dark</button>
+                            </div>
+                            <br>
+                            <div id="background">
+                                <h2 id="background-title">Background</h2>
+                                <button id="changeBGButton" onclick="changeBGImage()">Change background</button>
+                                <h2 id="or-title">or</h2>
+                                <input type="color" name="bgc" id="bgc" onchange="setBGColor()">
+                            </div>
+                        </div>
+                    </p>
+                </details>
+            </aside>
+            <br>
+            <hr>
+            <br>
+            <aside>
+                <details>
+                    <summary class="summary-title">DAILY JOKE</summary>
+                    <p id="jokeOutput" class="paragraph"></p>
+                </details>
+            </aside>
+            <br>
+            <hr>
+            <br>
+            <aside>
+                <details>
+                    <summary class="summary-title">CREDITS</summary>
+                    <p class="paragraph">-color-hex.com (discord colors) <br>- Daily Web Coding (youtube)</p>
+                </details>
+            </aside>
+            <br>
+            <hr>
+            <br>
+            <aside>
+                <details>
+                    <summary class="summary-title">OPTIONS</summary>
+                    <p class="paragraph">
+                        <button id="refreshBTN" onclick="window.location.reload()">Refresh</button>
+                        <button onclick="window.open('https://github.com/user908812?tab=repositories')">More github projects</button>
+                    </p>
+                </details>
+            </aside>
+            <br>
+            <hr>
+        </div>
+
+        <div id="right">
+            <div id="chat">
+                <script src="https://giscus.app/client.js" data-repo="user908812/Chat" data-repo-id="R_kgDOL4LeXw" data-category="General" data-category-id="DIC_kwDOL4LeX84CfMRf" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="dark_dimmed" data-lang="pl" crossorigin="anonymous" async></script>
+            </div>
+        </div>
+
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>

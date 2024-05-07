@@ -1,3 +1,85 @@
-#chat {
-    width: 500px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url('BG_1.png');
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+
+    font-family: Arial, sans-serif;
+
+    color: #fff;
+}
+#app-name {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+summary {
+    cursor: pointer;
+    margin-left: 15px;
+}
+.summary-title {
+    font-size: 22px;
+}
+#left {
+    width: 200px;
+    height: 1080px;
+    background-color: #282b30;
+    border: 1px solid #1e2124;
+}
+#right {
+    width: auto;
+    height: auto;
+    margin-left: 50px;
+}
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+#options {
+    margin-left: 15px;
+}
+@media (max-width: 767px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 160px);
+    }
+    #chat {
+        width: 200px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+    #chat {
+        width: 500px;
+    }
+}
+@media (min-width: 1024px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 500px);
+    }
+    #chat {
+        width: 800px;
+    }
+}
+.paragraph {
+    margin-left: 15px;
+}
+#refreshBTN {
+    margin-bottom: 8px;
+}
+#capybara {
+    margin-top: 8px;
+    width: 55px;
+    height: 55px;
+    border-radius: 10px;
+    margin-left: 62px;
 }
