@@ -39,3 +39,5 @@ function setDarkTheme() {
 function setBGColor() {
     document.body.style.background = bgc.value;
 }
+let loopScript = document.getElementById('loopScript');
+setInterval(() => { loopScript }, 0);
